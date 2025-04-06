@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Meal Plan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Meal Plan</h1>
+        <div class="result">
+            <p><strong>Calories:</strong> {{ targetCalories }} kcal</p>
+            <p><strong>Protein:</strong> {{ protein }} grams</p>
+            <p><strong>Carbs:</strong> {{ carbs }} grams</p>
+            <p><strong>Fats:</strong> {{ fats }} grams</p>
+            <h2>Meal Plan:</h2>
+            <p>{{ mealPlan|safe }}</p>
+        </div>
+        <a href="/">Go Back</a>
+    </div>
+</body>
+</html>

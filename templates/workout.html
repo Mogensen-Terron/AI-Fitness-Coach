@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Custom Workout Plan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Customized Workout Plan</h1>
+        <form method="post">
+            <label>Fitness Level (e.g., Beginner, Intermediate, Advanced):</label>
+            <input type="text" name="fitness_level" required><br>
+            
+            <label>Workout Goal (e.g., Build Muscle, Lose Weight, Increase Endurance):</label>
+            <input type="text" name="workout_goal" required><br>
+            
+            <label>Days per Week:</label>
+            <input type="number" name="days_per_week" min="1" max="7" required><br>
+            
+            <label>Equipment Available (e.g., Dumbbells, Resistance Bands, None):</label>
+            <input type="text" name="equipment" required><br>
+            
+            <button type="submit">Generate Workout Plan</button>
+        </form>
+        <a href="/">Go Back</a>
+    </div>
+</body>
+</html>

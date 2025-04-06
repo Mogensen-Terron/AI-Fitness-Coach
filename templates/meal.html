@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Generate Meal Plan</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Generate Meal Plan</h1>
+    <form method="post">
+      <label>Weight (in pounds):</label>
+      <input type="number" name="weight" step="any" required><br>
+      
+      <label>Height (in inches):</label>
+      <input type="number" name="height" step="any" required><br>
+      
+      <label>Age:</label>
+      <input type="number" name="age" required><br>
+      
+      <label>Gender (male/female):</label>
+      <input type="text" name="gender" required><br>
+      
+      <label>Activity Level (1-5):</label>
+      <input type="number" name="activity_level" min="1" max="5" required><br>
+      
+      <label>Goal (gain/lose/maintain):</label>
+      <input type="text" name="goal" required><br>
+      
+      <label>Weekly Budget ($):</label>
+      <input type="number" name="weekly_budget" step="any" required><br>
+      
+      <label>Number of Meals per Day:</label>
+      <input type="number" name="number_of_meals" required><br>
+      
+      <button type="submit">Generate Meal Plan</button>
+    </form>
+    
+    <!-- Go Back Button at the Bottom -->
+    <a href="/" class="go-back-btn">Go Back</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fitness App Home</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <!-- Welcome Section -->
+    <section class="welcome-text">
+      <h1>Welcome to Your Fitness App</h1>
+      <p>Select an option below to get started.</p>
+    </section>
+
+    <!-- Card Container -->
+    <div class="card-container">
+      <!-- Workout Plan Card -->
+      <div class="card">
+        <div class="card-image-container">
+          <img src="{{ url_for('static', filename='images/workout.png') }}" alt="Workout Plan" class="card-image">
+          <a href="/workout" class="arrow-link">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M13 5l7 7-7 7v-4H4v-6h9V5z"/>
+            </svg>
+          </a>
+        </div>
+        <h2>Make a Workout Plan</h2>
+      </div>
+
+      <!-- Meal Plan Card -->
+      <div class="card">
+        <div class="card-image-container">
+          <img src="{{ url_for('static', filename='images/meal.png') }}" alt="Meal Plan" class="card-image">
+          <a href="/meal" class="arrow-link">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M13 5l7 7-7 7v-4H4v-6h9V5z"/>
+            </svg>
+          </a>
+        </div>
+        <h2>Make a Meal Plan</h2>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
